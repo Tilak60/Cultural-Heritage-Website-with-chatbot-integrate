@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultural Heritage Education Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lobster&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sih.css"> <!-- Ensure the CSS file is in the same directory -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+ <script src="sih.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header-content">
+        <h2>Cultural Heritage Education Hub</h2>
+        <nav class="nav">
+          <a href="#">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#resources">Educational Resources</a>
+          <a href="#workshops">Workshops</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Discover the Richness of Our Cultural Heritage</h1>
+        <p>Explore, Learn, and Engage with the Past to Shape the Future.</p>
+        <button class="btn-pay" onclick="initiatePayment()">Book Tickets</button>
+      </div>
+      <div class="hero-image">
+        <img src="Hertiage.jpg" alt="Heritage Illustration">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <div id="about" class="about">
+      <h2>About Us</h2>
+      <p>Our mission is to preserve and share the cultural heritage of our region. We aim to educate and inspire by providing access to rich historical artifacts, interactive learning modules, and engaging workshops.</p>
+      <p>Through our educational programs, we engage people of all ages to explore and understand the history, traditions, and customs that have shaped our world. Our initiative brings together researchers, historians, and cultural enthusiasts to share knowledge and foster appreciation of cultural diversity.</p>
+    </div>
+
+    <!-- Educational Resources -->
+    <div id="resources" class="resources-section">
+      <h2>Educational Resources</h2>
+      <div class="resources-grid">
+        <a href="ebooks.html" class="resource">
+          <img src="ebooks.jpg" alt="eBooks for History">
+          <h3>History eBooks</h3>
+          <p>Explore a wide range of history eBooks designed for students and enthusiasts.</p>
+        </a>
+        <a href="artifacts.html" class="resource">
+          <img src="aa.jpg" alt="Artifacts Documentation">
+          <h3>Artifacts Documentation</h3>
+          <p>Discover detailed documentation on ancient artifacts.</p>
+        </a>
+        <a href="study-guide.html" class="resource">
+          <img src="study.jpg" alt="Study Guides">
+          <h3>Study Guides</h3>
+          <p>Download guides tailored to students' learning needs.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Download PDF Section -->
+    <div id="downloads" class="downloads-section">
+      <h2>Download Cultural Heritage PDFs</h2>
+      <p>Access detailed information and learn more about cultural heritage.</p>
+      <a href="cultural_heritage.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+    <!-- Gallery -->
+    <div id="gallery" class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="a1.jpg" alt="Artifact 1">
+        <img src="a2.jpg" alt="Artifact 2">
+        <img src="a3.jpg" alt="Artifact 3">
+        <img src="a4.jpg" alt="Artifact 4">
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div id="testimonials" class="testimonials">
+      <h2>Visitor Testimonials</h2>
+      <div class="testimonial">
+        <p>"An enriching experience that brought history to life!" - <strong>Priya Sharma</strong></p>
+      </div>
+      <div class="testimonial">
+        <p>"A wonderful place to learn and explore our heritage." - <strong>Rahul Verma</strong></p>
+      </div>
+    </div>
+
+    <!-- Event Calendar Section -->
+    <div id="events" class="events">
+      <h2>Upcoming Events</h2>
+      <p>Join our upcoming workshops and events to learn more about cultural heritage.</p>
+      <ul>
+        <li><strong>March 5, 2025:</strong> Ancient Pottery Workshop</li>
+        <li><strong>March 20, 2025:</strong> Historical Artifacts Exhibition</li>
+        <li><strong>April 10, 2025:</strong> Cultural Heritage Storytelling Session</li>
+      </ul>
+    </div>
+
+    <!-- Newsletter Subscription Section -->
+    <div id="newsletter" class="newsletter">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for the latest updates and events.</p>
+      <form action="#">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn-subscribe">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@heritagehub.in</p>
+      <p>Phone: +91-987-654-3210</p>
+      <p>Address: Heritage Lane, Nagpur - 440018, India</p>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz" class="quiz-section">
+      <h2>Quiz Time!</h2>
+      <div id="quiz-container">
+        <div class="question" id="question"></div>
+        <div class="answers">
+          <button class="answer-btn" onclick="checkAnswer('A')">A</button>
+          <button class="answer-btn" onclick="checkAnswer('B')">B</button>
+          <button class="answer-btn" onclick="checkAnswer('C')">C</button>
+          <button class="answer-btn" onclick="checkAnswer('D')">D</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Cultural Heritage Education Hub. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Razorpay Payment Script -->
+  <script>
+    function initiatePayment() {
+      const options = {
+        key: "YOUR_RAZORPAY_API_KEY", // Replace with your Razorpay API key
+        amount: 50000, // Amount in smallest currency unit (e.g., 50000 = ₹500.00)
+        currency: "INR",
+        name: "Cultural Heritage Education Hub",
+        description: "Ticket Booking",
+        handler: function(response) {
+          alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+          generateTicket(response.razorpay_payment_id);
+        },
+        prefill: {
+          name: "Your Name",
+          email: "your.email@example.com",
+          contact: "9999999999"
+        },
+        theme: {
+          color: "#ff6600"
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+
+    function generateTicket(paymentId) {
+      const ticketContent = `
+        <h1>Your Ticket</h1>
+        <p><strong>Payment ID:</strong> ${paymentId}</p>
+        <p><strong>Name:</strong> Your Name</p>
+        <p><strong>Event:</strong> Cultural Heritage Exploration</p>
+        <p><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
+        <p>Thank you for booking with us!</p>
+      `;
+
+      const ticketBlob = new Blob([ticketContent], { type: "text/html" });
+      const ticketURL = URL.createObjectURL(ticketBlob);
+
+      const downloadLink = document.createElement("a");
+      downloadLink.href = ticketURL;
+      downloadLink.download = "Ticket.html";
+      downloadLink.click();
+    }
+  </script>
+
+ 
