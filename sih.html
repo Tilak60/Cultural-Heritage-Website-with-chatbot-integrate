@@ -3,133 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cultural Heritage Education Hub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lobster&family=Montserrat:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="sih.css"> <!-- Ensure the CSS file is in the same directory -->
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
- <script src="sih.js"></script>
+  <title>Bharat Heritage Museum - Discover India's Rich Cultural Legacy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sih_new.css">
+  <script src="sih.js"></script>
 </head>
 <body>
-  <div class="container">
-    <!-- Header Section -->
-    <header class="header">
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
       <div class="header-content">
-        <h2>Cultural Heritage Education Hub</h2>
-        <nav class="nav">
-          <a href="#">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#resources">Educational Resources</a>
-          <a href="#workshops">Workshops</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+        <div class="logo">
+          <p>Bharat Heritage Museum</p>
+          <p class="tagline">Preserving India's Cultural Legacy</p>
+        </div>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
       </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Discover the Richness of Our Cultural Heritage</h1>
-        <p>Explore, Learn, and Engage with the Past to Shape the Future.</p>
-        <button class="btn-pay" onclick="initiatePayment()">Book Tickets</button>
-      </div>
-      <div class="hero-image">
-        <img src="Hertiage.jpg" alt="Heritage Illustration">
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <div id="about" class="about">
-      <h2>About Us</h2>
-      <p>Our mission is to preserve and share the cultural heritage of our region. We aim to educate and inspire by providing access to rich historical artifacts, interactive learning modules, and engaging workshops.</p>
-      <p>Through our educational programs, we engage people of all ages to explore and understand the history, traditions, and customs that have shaped our world. Our initiative brings together researchers, historians, and cultural enthusiasts to share knowledge and foster appreciation of cultural diversity.</p>
     </div>
+  </header>
 
-    <!-- Educational Resources -->
-    <div id="resources" class="resources-section">
-      <h2>Educational Resources</h2>
-      <div class="resources-grid">
-        <a href="ebooks.html" class="resource">
-          <img src="ebooks.jpg" alt="eBooks for History">
-          <h3>History eBooks</h3>
-          <p>Explore a wide range of history eBooks designed for students and enthusiasts.</p>
-        </a>
-        <a href="artifacts.html" class="resource">
-          <img src="aa.jpg" alt="Artifacts Documentation">
-          <h3>Artifacts Documentation</h3>
-          <p>Discover detailed documentation on ancient artifacts.</p>
-        </a>
-        <a href="study-guide.html" class="resource">
-          <img src="study.jpg" alt="Study Guides">
-          <h3>Study Guides</h3>
-          <p>Download guides tailored to students' learning needs.</p>
-        </a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Discover the Magnificence of Indian Heritage</h2>
+          <p>Journey through millennia of rich cultural traditions, ancient artifacts, and timeless stories that shaped our civilization.</p>
+          <div class="hero-buttons">
+            <button class="btn-primary" onclick="scrollToSection('gallery')">Explore Gallery</button>
+            <button class="btn-secondary" onclick="scrollToSection('about')">Learn More</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="Hertiage.jpg" alt="Heritage Illustration">
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Download PDF Section -->
-    <div id="downloads" class="downloads-section">
-      <h2>Download Cultural Heritage PDFs</h2>
-      <p>Access detailed information and learn more about cultural heritage.</p>
-      <a href="cultural_heritage.pdf" download class="btn-download">Download PDF</a>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Bharat Heritage Museum</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Welcome to Bharat Heritage Museum, India's premier destination for cultural exploration and historical discovery. Our mission is to preserve, showcase, and celebrate the incredible diversity of Indian heritage that spans over 5,000 years.</p>
+          <p>From ancient Indus Valley artifacts to magnificent Mughal treasures, from traditional folk art to contemporary cultural expressions, our museum houses one of the world's most comprehensive collections of Indian heritage.</p>
+          <div class="stats">
+            <div class="stat">
+              <h3>10,000+</h3>
+              <p>Artifacts</p>
+            </div>
+            <div class="stat">
+              <h3>50+</h3>
+              <p>Exhibitions</p>
+            </div>
+            <div class="stat">
+              <h3>1M+</h3>
+              <p>Visitors</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="Interior-National-Gallery-of-Art-Washington-DC.webp" alt="Museum Interior">
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Gallery -->
-    <div id="gallery" class="gallery">
+  <!-- Gallery -->
+  <section id="gallery" class="gallery">
+    <div class="container">
       <h2>Gallery</h2>
       <div class="gallery-grid">
-        <img src="a1.jpg" alt="Artifact 1">
-        <img src="a2.jpg" alt="Artifact 2">
-        <img src="a3.jpg" alt="Artifact 3">
-        <img src="a4.jpg" alt="Artifact 4">
+        <div class="gallery-item">
+          <img src="a1.jpg" alt="Ancient Sculpture">
+          <div class="gallery-overlay">
+            <h3>Ancient Sculpture</h3>
+            <p>Gupta Period - 5th Century CE</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="a2.jpg" alt="Traditional Painting">
+          <div class="gallery-overlay">
+            <h3>Traditional Painting</h3>
+            <p>Rajasthani Miniature Art</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="a3.jpg" alt="Historical Artifact">
+          <div class="gallery-overlay">
+            <h3>Historical Artifact</h3>
+            <p>Mughal Era - 16th Century</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="a4.jpg" alt="Ancient Pottery">
+          <div class="gallery-overlay">
+            <h3>Ancient Pottery</h3>
+            <p>Indus Valley Civilization</p>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Testimonials Section -->
-    <div id="testimonials" class="testimonials">
-      <h2>Visitor Testimonials</h2>
-      <div class="testimonial">
-        <p>"An enriching experience that brought history to life!" - <strong>Priya Sharma</strong></p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Visit Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h3>Address</h3>
+              <p>Heritage Lane, Nagpur - 440018<br>Maharashtra, India</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h3>Phone</h3>
+              <p>+91-987-654-3210</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <p>info@bharatmuseum.in</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div class="contact-details">
+              <h3>Hours</h3>
+              <p>Tue-Sun: 9:00 AM - 6:00 PM<br>Closed on Mondays</p>
+            </div>
+          </div>
+        </div>
+        <div class="newsletter">
+          <h3>Stay Connected</h3>
+          <p>Subscribe to our newsletter for updates on new exhibitions and events.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn-primary">Subscribe</button>
+          </form>
+        </div>
       </div>
-      <div class="testimonial">
-        <p>"A wonderful place to learn and explore our heritage." - <strong>Rahul Verma</strong></p>
-      </div>
     </div>
+  </section>
 
-    <!-- Event Calendar Section -->
-    <div id="events" class="events">
-      <h2>Upcoming Events</h2>
-      <p>Join our upcoming workshops and events to learn more about cultural heritage.</p>
-      <ul>
-        <li><strong>March 5, 2025:</strong> Ancient Pottery Workshop</li>
-        <li><strong>March 20, 2025:</strong> Historical Artifacts Exhibition</li>
-        <li><strong>April 10, 2025:</strong> Cultural Heritage Storytelling Session</li>
-      </ul>
-    </div>
-
-    <!-- Newsletter Subscription Section -->
-    <div id="newsletter" class="newsletter">
-      <h2>Stay Updated</h2>
-      <p>Subscribe to our newsletter for the latest updates and events.</p>
-      <form action="#">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit" class="btn-subscribe">Subscribe</button>
-      </form>
-    </div>
-
-    <!-- Contact Section -->
-    <div id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <p>Email: info@heritagehub.in</p>
-      <p>Phone: +91-987-654-3210</p>
-      <p>Address: Heritage Lane, Nagpur - 440018, India</p>
-    </div>
-
-    <!-- Quiz Section -->
-    <div id="quiz" class="quiz-section">
-      <h2>Quiz Time!</h2>
+  <!-- Quiz Section -->
+  <section class="quiz-section">
+    <div class="container">
+      <h2>Test Your Heritage Knowledge</h2>
       <div id="quiz-container">
-        <div class="question" id="question"></div>
+        <div id="question"></div>
         <div class="answers">
           <button class="answer-btn" onclick="checkAnswer('A')">A</button>
           <button class="answer-btn" onclick="checkAnswer('B')">B</button>
@@ -138,58 +181,74 @@
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Cultural Heritage Education Hub. All Rights Reserved.</p>
-    </footer>
-  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Bharat Heritage Museum</h3>
+          <p>Preserving India's Cultural Legacy for Future Generations</p>
+          <div class="social-links">
+            <a href="#" title="Facebook">📘</a>
+            <a href="#" title="Instagram">📸</a>
+            <a href="#" title="Twitter">🐦</a>
+            <a href="#" title="YouTube">📺</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="#about">About Us</a>
+          <a href="#resources">Resources</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#events">Events</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Visitor Info</h4>
+          <a href="#">Admission Rates</a>
+          <a href="#">Group Visits</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Museum Map</a>
+          <a href="#">Parking</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Become a Member</a>
+          <a href="#">Donate</a>
+          <a href="#">Volunteer</a>
+          <a href="#">Corporate Partners</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bharat Heritage Museum. All Rights Reserved. | Made with ❤️ for Indian Heritage</p>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Razorpay Payment Script -->
+  <!-- JavaScript Functions -->
   <script>
-    function initiatePayment() {
-      const options = {
-        key: "YOUR_RAZORPAY_API_KEY", // Replace with your Razorpay API key
-        amount: 50000, // Amount in smallest currency unit (e.g., 50000 = ₹500.00)
-        currency: "INR",
-        name: "Cultural Heritage Education Hub",
-        description: "Ticket Booking",
-        handler: function(response) {
-          alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
-          generateTicket(response.razorpay_payment_id);
-        },
-        prefill: {
-          name: "Your Name",
-          email: "your.email@example.com",
-          contact: "9999999999"
-        },
-        theme: {
-          color: "#ff6600"
-        }
-      };
-
-      const rzp = new Razorpay(options);
-      rzp.open();
+    // Smooth scrolling function
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({
+        behavior: 'smooth'
+      });
     }
 
-    function generateTicket(paymentId) {
-      const ticketContent = `
-        <h1>Your Ticket</h1>
-        <p><strong>Payment ID:</strong> ${paymentId}</p>
-        <p><strong>Name:</strong> Your Name</p>
-        <p><strong>Event:</strong> Cultural Heritage Exploration</p>
-        <p><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
-        <p>Thank you for booking with us!</p>
-      `;
-
-      const ticketBlob = new Blob([ticketContent], { type: "text/html" });
-      const ticketURL = URL.createObjectURL(ticketBlob);
-
-      const downloadLink = document.createElement("a");
-      downloadLink.href = ticketURL;
-      downloadLink.download = "Ticket.html";
-      downloadLink.click();
-    }
+    // Add navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 100) {
+        header.style.background = 'linear-gradient(135deg, rgba(62, 39, 35, 0.95) 0%, rgba(139, 69, 19, 0.95) 100%)';
+        header.style.backdropFilter = 'blur(10px)';
+      } else {
+        header.style.background = 'linear-gradient(135deg, var(--deep-brown) 0%, var(--primary-dark) 100%)';
+        header.style.backdropFilter = 'none';
+      }
+    });
   </script>
 
- 
+  <!-- Botpress Chatbot Integration -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/01/09/13/20250109131636-GQCI0JNX.js"></script>
